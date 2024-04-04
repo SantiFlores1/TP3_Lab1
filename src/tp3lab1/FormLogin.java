@@ -29,10 +29,10 @@ public class FormLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jlInicioDeSesion = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jlUsuario = new javax.swing.JLabel();
+        jlContrasenia = new javax.swing.JLabel();
         jtUsuario = new javax.swing.JTextField();
         jtContrasenia = new javax.swing.JTextField();
         jbRegistrar = new javax.swing.JButton();
@@ -40,16 +40,16 @@ public class FormLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Credenciales");
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("Inicio de sesion");
+        jlInicioDeSesion.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jlInicioDeSesion.setText("Inicio de sesion");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Ingrese las credenciales")));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel2.setText("Usuario:");
+        jlUsuario.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jlUsuario.setText("Usuario:");
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel3.setText("Contraseña:");
+        jlContrasenia.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jlContrasenia.setText("Contraseña:");
 
         jbRegistrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jbRegistrar.setText("Verificar");
@@ -71,8 +71,8 @@ public class FormLogin extends javax.swing.JFrame {
                         .addGap(85, 85, 85))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
+                            .addComponent(jlContrasenia)
+                            .addComponent(jlUsuario))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jtContrasenia)
@@ -84,13 +84,13 @@ public class FormLogin extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(jlUsuario)
+                    .addComponent(jtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
+                    .addComponent(jlContrasenia)
+                    .addComponent(jtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
                 .addComponent(jbRegistrar)
                 .addContainerGap(33, Short.MAX_VALUE))
         );
@@ -101,7 +101,7 @@ public class FormLogin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlInicioDeSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(234, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -113,13 +113,13 @@ public class FormLogin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jlInicioDeSesion)
                 .addContainerGap(244, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(41, 41, 41)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(43, Short.MAX_VALUE)))
+                    .addContainerGap(33, Short.MAX_VALUE)))
         );
 
         pack();
@@ -128,14 +128,12 @@ public class FormLogin extends javax.swing.JFrame {
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
         // TODO add your handling code here:
         String usuario= jtUsuario.getText();
-        int contra= Integer.parseInt(jtContrasenia.getText());
+        String contra = jtContrasenia.getText();
 
-        if("alumno@ulp.edu.ar".equals(usuario) && contra == 12345678 ){
-            JOptionPane.showMessageDialog(this, "Bienvenido!");
+        if (usuario.equals("alumno@ulp.edu.ar") && contra.equals("12345678")){
+            JOptionPane.showMessageDialog(this, "¡Bienvenido!");
         }else{
-            jtUsuario.setText("");
-            jtContrasenia.setText("");
-            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos.");
         }
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
@@ -175,11 +173,11 @@ public class FormLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton jbRegistrar;
+    private javax.swing.JLabel jlContrasenia;
+    private javax.swing.JLabel jlInicioDeSesion;
+    private javax.swing.JLabel jlUsuario;
     private javax.swing.JTextField jtContrasenia;
     private javax.swing.JTextField jtUsuario;
     // End of variables declaration//GEN-END:variables
