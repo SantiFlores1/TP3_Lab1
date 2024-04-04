@@ -41,7 +41,7 @@ public class FormLogin extends javax.swing.JFrame {
         setTitle("Credenciales");
 
         jlInicioDeSesion.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jlInicioDeSesion.setText("Inicio de sesion");
+        jlInicioDeSesion.setText("Inicio de sesión");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Ingrese las credenciales")));
 
@@ -50,6 +50,12 @@ public class FormLogin extends javax.swing.JFrame {
 
         jlContrasenia.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jlContrasenia.setText("Contraseña:");
+
+        jtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtUsuarioActionPerformed(evt);
+            }
+        });
 
         jbRegistrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jbRegistrar.setText("Verificar");
@@ -136,6 +142,10 @@ public class FormLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos.");
         }
     }//GEN-LAST:event_jbRegistrarActionPerformed
+
+    private void jtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
