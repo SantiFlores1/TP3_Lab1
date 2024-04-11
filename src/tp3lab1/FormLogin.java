@@ -34,8 +34,8 @@ public class FormLogin extends javax.swing.JFrame {
         jlUsuario = new javax.swing.JLabel();
         jlContrasenia = new javax.swing.JLabel();
         jtUsuario = new javax.swing.JTextField();
-        jtContrasenia = new javax.swing.JTextField();
         jbRegistrar = new javax.swing.JButton();
+        jtContrasenia = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Credenciales");
@@ -81,8 +81,8 @@ public class FormLogin extends javax.swing.JFrame {
                             .addComponent(jlUsuario))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtContrasenia)
-                            .addComponent(jtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                            .addComponent(jtContrasenia))))
                 .addGap(36, 36, 36))
         );
         jPanel2Layout.setVerticalGroup(
@@ -125,7 +125,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(41, 41, 41)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(33, Short.MAX_VALUE)))
+                    .addContainerGap(43, Short.MAX_VALUE)))
         );
 
         pack();
@@ -188,7 +188,7 @@ public class FormLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jlContrasenia;
     private javax.swing.JLabel jlInicioDeSesion;
     private javax.swing.JLabel jlUsuario;
-    private javax.swing.JTextField jtContrasenia;
+    private javax.swing.JPasswordField jtContrasenia;
     private javax.swing.JTextField jtUsuario;
     // End of variables declaration//GEN-END:variables
 }
